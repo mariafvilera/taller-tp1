@@ -25,7 +25,18 @@ public class Empleado{
 
     public float CalcularSalario(){
         float Adicional;
-            
+
+        switch(Antiguedad){
+            case Antiguedad <= 1:
+                Adicional = 1;
+                break;
+            case Antiguedad <= 2:
+                Adicional = 2;
+                break;
+            case Antiguedad <= 15:
+                Adicional = 15;
+                break;
+        }
         return salario + (Antiguedad * Adicional) - (Descuento * Salario);
     }
 }
